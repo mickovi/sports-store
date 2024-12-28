@@ -1,0 +1,38 @@
+{
+  "name": "sports-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc-watch --noClear --onsuccess \"node dist/server.js\"",
+    "start": "nodemon --exec npm run watch"
+  },
+  "nodemonConfig": {
+    "ext": "js,handlebars,json",
+    "ignore": [
+      "dist/**",
+      "node_modules/**"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "nodemon": "^3.1.7",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8",
+    "helmet": "^8.0.0",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  }
+}
