@@ -17,10 +17,8 @@ catch { }
 const getConfig = (path, defaultVal = undefined) => {
     const paths = path.split(":"); // ["http", "port"]
     let val = data; // val = {http: {port: 5000}}
+    console.log(data);
     paths.forEach((p) => (val = val[p])); // val = val["http"] = {port: 5000}, val = val["port"] = 5000
-    for (let i = 0; i < paths.length; i++) {
-        console.log(paths.length, paths[i]);
-    }
     return val ?? defaultVal;
 };
 exports.getConfig = getConfig;

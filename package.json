@@ -18,9 +18,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node20": "^20.0.0",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.0",
+    "@types/node": "^20.10.0",
     "nodemon": "^3.1.7",
     "tsc-watch": "^6.2.1",
     "typescript": "^5.7.2"
