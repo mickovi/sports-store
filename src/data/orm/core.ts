@@ -42,4 +42,6 @@ export class BaseRepo {
   }
 }
 
+// It defines a type that will be used to create the mixin and represents 
+// a type that can be instantiated with the new keyword.
 export type Constructor<T = {}> = new (...args: any[]) => T;

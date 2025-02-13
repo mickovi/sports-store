@@ -1,3 +1,8 @@
+/* 
+  The CatalogRepository interface defines methods to query and store 
+  objects that implement the Product, Category, and Supplier interfaces.
+*/
+
 import { Category, Product, Supplier } from "./catalog_models";
 
 export interface CatalogRepository {

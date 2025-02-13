@@ -10,12 +10,9 @@ const port = getConfig("http:port", 8080);
 
 const expressApp: Express = express();
 
-expressApp.use(helmet());
+expressApp.use(helmet()); // Add security headers (like Content-Security-Policy, X-Frame-Options, etc.)
 expressApp.use(express.json());
-expressApp.use(express.urlencoded({ extended: true }));
-/* expressApp.get("/", (req, res) => {
-  res.send("Hello, World");
-}); */
+expressApp.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies with extended syntax (json)
 
 expressApp.use(express.static("node_modules/bootstrap/dist"));
 createTemplates(expressApp);

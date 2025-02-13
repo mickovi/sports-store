@@ -12,12 +12,9 @@ const helpers_1 = require("./helpers");
 const errors_1 = require("./errors");
 const port = (0, config_1.getConfig)("http:port", 8080);
 const expressApp = (0, express_1.default)();
-expressApp.use((0, helmet_1.default)());
+expressApp.use((0, helmet_1.default)()); // Add security headers (like Content-Security-Policy, X-Frame-Options, etc.)
 expressApp.use(express_1.default.json());
-expressApp.use(express_1.default.urlencoded({ extended: true }));
-/* expressApp.get("/", (req, res) => {
-  res.send("Hello, World");
-}); */
+expressApp.use(express_1.default.urlencoded({ extended: true })); // Parse URL-encoded bodies with extended syntax (json)
 expressApp.use(express_1.default.static("node_modules/bootstrap/dist"));
 (0, helpers_1.createTemplates)(expressApp);
 (0, routes_1.createRoutes)(expressApp);

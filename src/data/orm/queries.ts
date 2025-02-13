@@ -1,6 +1,10 @@
 import { CategoryModel, ProductModel, SupplierModel } from "./models";
 import { BaseRepo, Constructor } from "./core";
   
+/* 
+  The AddQueries function accepts a base class and returns a new class
+  that adds the getProducts, getCategories, and getSuppliers methods. 
+*/
 export function AddQueries<TBase extends Constructor<BaseRepo>>(Base: TBase) {
   return class extends Base {
     getProducts() {
