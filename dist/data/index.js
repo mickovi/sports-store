@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.catalog_repository = void 0;
+exports.order_repository = exports.catalog_repository = void 0;
 const orm_1 = require("./orm");
-exports.catalog_repository = new orm_1.CatalogRepoImpl();
+// export const catalog_repository: CatalogRepository = new CatalogRepoImpl();
+const repo = new orm_1.CatalogRepoImpl();
+exports.catalog_repository = repo;
+exports.order_repository = repo;

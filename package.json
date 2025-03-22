@@ -19,20 +19,27 @@
   "description": "",
   "devDependencies": {
     "@tsconfig/node20": "^20.0.0",
+    "@types/cookie-parser": "^1.4.8",
     "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
     "@types/node": "^20.10.0",
+    "@types/validator": "^13.12.2",
     "nodemon": "^3.1.7",
     "tsc-watch": "^6.2.1",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "express-async-errors": "^3.1.1",
     "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
     "handlebars": "^4.7.8",
     "helmet": "^8.0.0",
     "sequelize": "^6.37.5",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "validator": "^13.12.0"
   }
 }

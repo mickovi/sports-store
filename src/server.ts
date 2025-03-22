@@ -5,6 +5,7 @@ import { getConfig } from "./config";
 import { createRoutes } from "./routes";
 import { createTemplates } from "./helpers";
 import { createErrorHandlers } from "./errors";
+import { createSessions } from "./sessions";
 
 const port = getConfig("http:port", 8080);
 
@@ -18,6 +19,7 @@ expressApp.use(express.static("node_modules/bootstrap/dist"));
 createTemplates(expressApp);
 createRoutes(expressApp);
 createErrorHandlers(expressApp);
+createSessions(expressApp);
 
 const server = createServer(expressApp);
 server.listen(port, () => console.log(`HTTP Server listening on port ${port}`));
